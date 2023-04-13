@@ -1,0 +1,517 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  font-size: 18px;
+}
+
+.button-basics, footer .section-contact form input[type=submit], main .section-portfolio-gallery .cards-wrapper .card .access-absolute button, main .section-portfolio-gallery .cards-wrapper .card .card-access button, main .section-portfolio-gallery .gallery-header button, .body-header .section-description button {
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+  padding-bottom: 0.6rem;
+  text-transform: uppercase;
+  color: hsl(0deg, 0%, 100%);
+  border: none;
+  border-bottom: 2px solid hsl(153deg, 71%, 59%);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button-basics:hover, footer .section-contact form input[type=submit]:hover, main .section-portfolio-gallery .cards-wrapper .card .access-absolute button:hover, main .section-portfolio-gallery .cards-wrapper .card .card-access button:hover, main .section-portfolio-gallery .gallery-header button:hover, .body-header .section-description button:hover {
+  color: hsl(153deg, 71%, 59%);
+}
+
+button a {
+  text-decoration: none;
+  color: hsl(0deg, 0%, 100%);
+}
+
+body {
+  background-color: hsl(0deg, 0%, 8%);
+  font-family: "Space Grotesk", sans-serif;
+  overflow-x: hidden;
+}
+
+.body-header {
+  padding: 0 1rem;
+  position: relative;
+  background-image: url("../assets/images/image-profile-mobile.webp");
+  background-size: 46%;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.body-header .banner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.body-header .banner p {
+  font-weight: bold;
+  font-size: 1.33rem;
+  line-height: 1.77rem;
+  color: hsl(0deg, 0%, 100%);
+  margin: 1rem 0;
+}
+.body-header .banner ul {
+  color: hsl(0deg, 0%, 100%);
+  display: flex;
+}
+.body-header .banner ul li {
+  margin-right: 1.3rem;
+}
+.body-header .banner ul li a {
+  cursor: pointer;
+}
+
+.body-header .section-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100%;
+}
+.body-header .section-description h2 {
+  font-weight: bold;
+  font-size: 2.66rem;
+  line-height: 3.11rem;
+  letter-spacing: -0.083rem;
+  font-size: 2.22rem;
+  color: hsl(0deg, 0%, 100%);
+  text-align: center;
+}
+.body-header .section-description h2 span {
+  text-decoration: underline hsl(153deg, 71%, 59%);
+}
+.body-header .section-description p {
+  font-weight: normal;
+  line-height: 1.55rem;
+  color: hsl(0deg, 0%, 85%);
+  text-align: center;
+  margin: 1.2rem 0;
+}
+#header-rings {
+  position: absolute;
+  top: 18%;
+  left: -100%;
+  z-index: -1;
+}
+
+#header-circle {
+  position: absolute;
+  top: 38%;
+  right: -15%;
+}
+
+main .section-experience {
+  margin: 4.44rem 1rem;
+  text-align: center;
+  padding-top: 2.22rem;
+  padding-bottom: 2.22rem;
+  border-bottom: 1px solid hsl(0deg, 0%, 85%);
+  border-top: 1px solid hsl(0deg, 0%, 85%);
+  position: relative;
+}
+main .section-experience div {
+  margin: 1.33rem 0;
+}
+main .section-experience div h2 {
+  font-size: 1.77rem;
+  font-weight: 700;
+  line-height: 2.22rem;
+  letter-spacing: -0.05rem;
+  color: hsl(0deg, 0%, 100%);
+}
+main .section-experience div p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.44rem;
+  letter-spacing: 0px;
+  color: hsl(0deg, 0%, 85%);
+}
+main .section-experience #experience-pattern {
+  position: absolute;
+  bottom: -10%;
+  right: -120%;
+}
+main .section-portfolio-gallery {
+  margin: 4.44rem 1rem;
+}
+main .section-portfolio-gallery .gallery-header {
+  margin: 2.22rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .section-portfolio-gallery .gallery-header h2 {
+  font-size: 2.22rem;
+  font-weight: 700;
+  line-height: 2.22rem;
+  letter-spacing: -0.05rem;
+  color: hsl(0deg, 0%, 100%);
+}
+main .section-portfolio-gallery .cards-wrapper .card {
+  margin: 2.22rem 0;
+}
+main .section-portfolio-gallery .cards-wrapper .card picture img {
+  width: 100%;
+  margin: 1rem 0;
+}
+main .section-portfolio-gallery .cards-wrapper .card h2 {
+  font-weight: bold;
+  font-size: 1.33rem;
+  line-height: 1.77rem;
+  color: hsl(0deg, 0%, 100%);
+  text-transform: uppercase;
+}
+main .section-portfolio-gallery .cards-wrapper .card .card-tools p {
+  font-weight: normal;
+  line-height: 1.55rem;
+  color: hsl(0deg, 0%, 85%);
+  margin-right: 1rem;
+  display: inline-block;
+}
+main .section-portfolio-gallery .cards-wrapper .card .card-access {
+  margin-top: 1rem;
+}
+main .section-portfolio-gallery .cards-wrapper .card .card-access button {
+  display: inline-block;
+  margin-right: 1.66rem;
+}
+footer {
+  background-color: hsl(0deg, 0%, 14%);
+  padding: 3.33rem 1rem;
+}
+footer .section-contact {
+  position: relative;
+}
+footer .section-contact .description-contact h2 {
+  font-size: 2.22rem;
+  font-weight: 700;
+  line-height: 2.22rem;
+  letter-spacing: -0.05rem;
+  text-align: center;
+  color: hsl(0deg, 0%, 100%);
+  margin: 1.11rem 0;
+}
+footer .section-contact .description-contact p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.44rem;
+  letter-spacing: 0;
+  text-align: center;
+  color: hsl(0deg, 0%, 85%);
+}
+footer .section-contact form {
+  margin: 2.77rem 0 4.44rem;
+}
+footer .section-contact form div {
+  position: relative;
+}
+footer .section-contact form div .error_icon {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+footer .section-contact form div .error_message {
+  color: red;
+  position: absolute;
+  bottom: -1.5rem;
+  right: 5%;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
+  line-height: 0.88rem;
+  letter-spacing: 0;
+  text-align: left;
+}
+footer .section-contact form input, footer .section-contact form textarea {
+  display: block;
+  margin: 1.77rem 0;
+  background-color: transparent;
+  border: none;
+  padding-bottom: 0.8rem;
+  padding-left: 1.44rem;
+  border-bottom: 1px solid hsl(0deg, 0%, 85%);
+  width: 90%;
+  outline: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.44rem;
+  letter-spacing: 0;
+  text-align: left;
+  color: hsl(0deg, 0%, 100%);
+}
+footer .section-contact form input::placeholder, footer .section-contact form textarea::placeholder {
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1.44rem;
+  letter-spacing: 0;
+  text-align: left;
+  color: hsl(0deg, 0%, 100%);
+}
+footer .section-contact form input[type=submit] {
+  padding: 0.8rem;
+  width: min-content;
+  margin-left: auto;
+}
+footer .section-contact #contact-pattern {
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  pointer-events: none;
+}
+footer .banner {
+  border-top: 1px solid hsl(0deg, 0%, 85%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+footer .banner p {
+  font-weight: bold;
+  font-size: 1.33rem;
+  line-height: 1.77rem;
+  color: hsl(0deg, 0%, 100%);
+  margin: 1rem 0;
+}
+footer .banner ul {
+  color: hsl(0deg, 0%, 100%);
+  display: flex;
+}
+footer .banner ul li {
+  margin-right: 1.3rem;
+}
+footer .banner ul li a {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 700px) {
+  .body-header {
+    padding: 1.66rem;
+    margin-bottom: 3.33rem;
+    background-image: url("../assets/images/image-profile-tablet.webp");
+    background-size: contain;
+    background-position: top right;
+  }
+  .body-header .banner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .body-header .section-description {
+    display: block;
+    margin-top: 10%;
+    text-align: left;
+    width: 60%;
+  }
+  .body-header .section-description h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: -0.1rem;
+    text-align: left;
+  }
+  .body-header .section-description p {
+    text-align: left;
+  }
+  #header-rings {
+    left: -40%;
+    top: 20%;
+  }
+  #header-circle {
+    right: -8%;
+    top: 78%;
+  }
+  main .section-experience {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: none;
+  }
+  main .section-experience div {
+    width: 50%;
+    text-align: left;
+  }
+  main .section-experience div h2 {
+    font-weight: bold;
+    font-size: 2.66rem;
+    line-height: 3.11rem;
+    letter-spacing: -0.083rem;
+  }
+  main .section-experience div p {
+    font-weight: normal;
+    line-height: 1.55rem;
+  }
+  main .section-experience #experience-pattern {
+    right: -50%;
+  }
+  main .section-portfolio-gallery .gallery-header h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: -0.1rem;
+  }
+  main .section-portfolio-gallery .cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  main .section-portfolio-gallery .cards-wrapper .card {
+    width: 46%;
+    margin-left: 1rem;
+  }
+  footer .section-contact {
+    margin: auto;
+    width: 65%;
+  }
+  footer .section-contact .description-contact h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: -0.1rem;
+    text-align: center;
+  }
+  footer .banner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .body-header {
+    margin: 0 9.166rem 5.77rem;
+    background-image: url("../assets/images/image-profile-desktop.webp");
+  }
+  .body-header .section-description {
+    margin-top: 10%;
+  }
+  .body-header .section-description h2 {
+    font-weight: bold;
+    font-size: 4.88rem;
+    line-height: 4.88rem;
+    letter-spacing: -0.138rem;
+  }
+  .body-header .section-description button {
+    margin-bottom: 6rem;
+  }
+  .banner ul li a:hover {
+    color: hsl(153deg, 71%, 59%);
+  }
+  #header-circle {
+    top: 82%;
+    right: 35%;
+  }
+  main .section-experience {
+    margin: 4.44rem 9.166rem;
+  }
+  main .section-experience div {
+    width: 33%;
+  }
+  main .section-experience #experience-pattern {
+    bottom: 0;
+    right: -40%;
+  }
+  main .section-portfolio-gallery {
+    margin: 0 9.166rem;
+  }
+  main .section-portfolio-gallery .cards-wrapper .card {
+    position: relative;
+  }
+  main .section-portfolio-gallery .cards-wrapper .card .access-absolute {
+    display: flex;
+    cursor: pointer;
+    position: absolute;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 23%;
+    left: 0;
+    right: 0;
+    background-color: hsla(0deg, 0%, 14%, 0.5);
+  }
+  main .section-portfolio-gallery .cards-wrapper .card .access-absolute button {
+    margin: 0.5rem;
+  }
+  footer {
+    padding: 4.55rem 9.1667rem;
+  }
+  footer .section-contact {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .section-contact .description-contact {
+    width: 40%;
+    margin-top: 10%;
+  }
+  footer .section-contact form {
+    width: 50%;
+  }
+  footer .section-contact #contact-pattern {
+    top: 60%;
+    left: -40%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

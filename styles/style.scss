@@ -1,0 +1,516 @@
+@import "reset";
+@import "colors";
+@import "typos";
+
+:root {
+	font-size: 18px;
+}
+// Basic templates
+// Button template
+.button-basics {
+	font-family: inherit;
+	font-size: .8rem;
+	font-weight: bold;
+	letter-spacing: .15rem;
+	padding-bottom: .6rem;
+	text-transform: uppercase;
+	color: $White;
+	border: none;
+	border-bottom: 2px solid $Green;
+	background-color: transparent;
+	cursor: pointer;
+}
+.button-basics:hover {
+	color: $Green;
+}
+button a {
+	text-decoration: none;
+	color: $White;
+}
+// Style body
+body {
+	background-color: $Black;
+	font-family: 'Space Grotesk', sans-serif;
+	overflow-x: hidden;
+}
+// Style header
+.body-header {
+	padding: 0 1rem;
+	position: relative;
+	background-image: url("../assets/images/image-profile-mobile.webp"); 
+	background-size: 46%;
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+	// Style the header banner 
+.body-header .banner {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+	p {
+	@include HeadingM;
+	color: $White;
+	margin: 1rem 0;
+	}
+	
+	ul {
+		color: $White;
+		display: flex;
+		li {
+			margin-right: 1.3rem;
+			a {
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+	// Style the description section
+.body-header .section-description {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 100%;
+	h2 {
+		@include HeadingL;
+		font-size: 2.22rem;
+		color: $White;
+		text-align: center;
+		span {
+			text-decoration: underline $Green;
+		}
+	}
+
+	p {
+		@include BodyL;
+		color: $Gray;
+		text-align: center;
+		margin: 1.2rem 0;
+	}
+	button {
+		@extend .button-basics
+	}
+
+}
+// style header pattern-decoration
+#header-rings {
+	position: absolute;
+	top: 18%;
+	left: -100%;
+	z-index: -1;
+}
+#header-circle {
+	position: absolute;
+	top: 38%;
+	right: -15%;
+}
+
+main {
+// Style main experience section
+	.section-experience {
+		margin: 4.44rem 1rem;
+		text-align: center;
+		padding-top: 2.22rem;
+		padding-bottom: 2.22rem;
+		border-bottom: 1px solid $Gray;
+		border-top: 1px solid $Gray;
+		position: relative;
+		div {
+			margin: 1.33rem 0;
+			h2 {
+				font-size: 1.77rem;
+				font-weight: 700;
+				line-height: 2.22rem;
+				letter-spacing: -.05rem;
+				color: $White;
+			}
+			p {
+				font-size: 1rem;
+				font-weight: 500;
+				line-height: 1.44rem;
+				letter-spacing: 0px;
+				color: $Gray;
+			}
+		}
+		#experience-pattern {
+			position: absolute;
+			bottom: -10%;
+			right: -120%;
+		}
+	}
+// Style portfolio gallery
+	.section-portfolio-gallery {
+		margin: 4.44rem 1rem ;
+		.gallery-header {
+			margin: 2.22rem 0;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			h2 {
+				font-size: 2.22rem;
+				font-weight: 700;
+				line-height: 2.22rem;
+				letter-spacing: -.05rem;
+				color: $White;
+			}
+			button {
+				@extend .button-basics
+			}
+		}
+		.cards-wrapper {
+			.card {
+				margin: 2.22rem 0;
+				picture {
+					img {
+						width: 100%;
+						margin: 1rem 0;
+					}
+				}
+				h2 {
+					@include HeadingM;
+					color: $White;
+					text-transform: uppercase;
+				}
+				.card-tools {
+					p {
+						@include BodyL;
+						color: $Gray;
+						margin-right: 1rem;
+						display: inline-block;
+					}
+				}
+				.card-access {
+					margin-top: 1rem;
+					button {
+						@extend .button-basics;
+						display: inline-block;
+						margin-right: 1.66rem;
+					}
+					
+				}
+				.access-absolute {
+					// display: none;
+					button {
+						@extend .button-basics;
+					}
+				}
+			}
+		}
+	}
+}
+
+footer {
+	background-color: $Dark-gray;
+	padding: 3.33rem 1rem;
+	.section-contact {
+		position: relative;
+		.description-contact {
+			h2 {
+				font-size: 2.22rem;
+				font-weight: 700;
+				line-height: 2.22rem;
+				letter-spacing: -.05rem;
+				text-align: center;
+				color: $White;
+				margin: 1.11rem 0;
+			}
+			p {
+				font-size: 1rem;
+				font-weight: 500;
+				line-height: 1.44rem;
+				letter-spacing: 0;
+				text-align: center;
+				color: $Gray;
+			}
+		}
+		form {
+			margin: 2.77rem 0 4.44rem;
+			div {
+				position: relative;
+				.error_icon {
+					display: none;
+					position: absolute;
+					right: 5%;
+					top: 5%;
+				}
+				.error_message {
+					color: red;
+					position: absolute;
+					bottom: -1.5rem;
+					right: 5%;
+					font-family: "Space Grotesk", sans-serif;
+					font-size: .6rem;
+					font-weight: 500;
+					line-height: .88rem;
+					letter-spacing: 0;
+					text-align: left;
+
+				}
+			}
+			input, textarea {
+				display: block;
+				margin: 1.77rem 0;
+				background-color: transparent;
+				border: none;
+				padding-bottom: .8rem;
+				padding-left: 1.44rem;
+				border-bottom: 1px solid $Gray;
+				width: 90%;
+				outline: none;
+				font-family: "Space Grotesk", sans-serif;
+				font-size: 1rem;
+				font-weight: 500;
+				line-height: 1.44rem;
+				letter-spacing: 0;
+				text-align: left;
+				color: $White;
+			}
+			input::placeholder, textarea::placeholder {
+				font-family: "Space Grotesk", sans-serif;
+				text-transform: uppercase;
+				font-size: .8rem;
+				font-weight: 500;
+				line-height: 1.44rem;
+				letter-spacing: 0;
+				text-align: left;
+				color: $White;
+			}
+			input[type="submit"]{
+				@extend .button-basics;
+				padding: .8rem;
+				width: min-content;
+				margin-left: auto;
+			}
+		}
+		#contact-pattern {
+			position: absolute;
+			top: 50%;
+			left: -100%;
+			pointer-events: none;
+		}
+	}
+	.banner {
+		border-top: 1px solid $Gray;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+
+		p {
+		@include HeadingM;
+		color: $White;
+		margin: 1rem 0;
+		}
+		
+		ul {
+			color: $White;
+			display: flex;
+			li {
+				margin-right: 1.3rem;
+				a {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+@media only screen and (min-width: 700px) {
+// Header
+	.body-header {
+		padding: 1.66rem;
+		margin-bottom: 3.33rem;
+		background-image: url("../assets/images/image-profile-tablet.webp");
+		background-size: contain;
+		background-position: top right; 
+	// Horizontal banner
+		.banner {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	// Change description layout
+		.section-description {
+			display: block;
+			margin-top: 10%;
+			text-align: left;
+			width: 60%;
+			// Modify Heading typo
+			h2 {
+				font-size: 4rem;
+				font-weight: 700;
+				line-height: 4rem;
+				letter-spacing: -.1rem;
+				text-align: left;
+			}
+			p {
+				text-align: left;
+			}
+		}
+	}
+	// Position decorative background patterns
+	#header-rings {
+		left: -40%;
+		top: 20%;
+	}
+	#header-circle {
+		right: -8%;
+		top: 78%;
+	}
+main {
+	// Section experience
+	.section-experience {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		border-bottom: none;
+		div {
+			width: 50%;
+			text-align: left;
+			h2 {
+				@include HeadingL;
+			}
+			p {
+				@include BodyL;
+			}
+		}
+		#experience-pattern{
+			right:-50%;
+		}
+	}
+	// Section Portfollio Gallery
+	.section-portfolio-gallery {
+		.gallery-header {
+			h2 {
+				font-size: 4rem;
+				font-weight: 700;
+				line-height: 4rem;
+				letter-spacing: -.1rem;
+			}
+		}
+		.cards-wrapper {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			.card {
+				width: 46%;
+				margin-left: 1rem;
+			}
+		}
+
+	}
+}
+
+footer {
+	.section-contact {
+		margin: auto;
+		width: 65%;
+		.description-contact {
+			h2 {
+				font-size: 4rem;
+				font-weight: 700;
+				line-height: 4rem;
+				letter-spacing: -.1rem;
+				text-align: center;
+			}	
+		}
+	}
+	.banner {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+}
+
+@media only screen and (min-width: 1200px) {
+// Header
+	.body-header {
+		margin: 0 9.166rem 5.77rem;
+		background-image: url("../assets/images/image-profile-desktop.webp");
+
+	// Change description layout
+		.section-description {
+			margin-top: 10%;
+			// Modify heading typo
+			h2 {
+				@include HeadingXL;
+			}
+			button {
+				margin-bottom: 6rem;
+			}
+		}
+	}
+	.banner ul li a:hover {
+		color: $Green;
+	}
+	// Position decorative background patterns
+	#header-circle {
+		top: 82%;
+		right: 35%;
+	}
+
+main {
+	// Section experience
+	.section-experience {
+		margin: 4.44rem 9.166rem;
+		div {
+			width: 33%;
+		}
+		#experience-pattern {
+			bottom: 0;
+			right: -40%;
+		}
+	}
+	// section portfolio gallery
+	.section-portfolio-gallery {
+		margin: 0 9.166rem;
+		.cards-wrapper {
+			.card {
+				position: relative;
+				.access-absolute {
+					display: flex;
+					cursor: pointer;
+					position: absolute;
+					flex-direction: column;
+					text-align: center;
+					justify-content: center;
+					align-items: center;
+					top:0;
+					bottom: 23%;
+					left: 0;
+					right: 0;
+					background-color: hsla(0, 0%, 14%, .5);
+					button {
+						margin: .5rem;
+					}
+				}
+			}
+		}
+	}
+}
+footer {
+	padding: 4.55rem 9.1667rem;
+	.section-contact {
+		margin: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		.description-contact {
+			width: 40%;
+			margin-top: 10%;
+		}
+		form {
+			width: 50%;
+		}
+		#contact-pattern {
+			top: 60%;
+			left: -40%;
+		}
+	}
+}
+
+}

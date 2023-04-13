@@ -1,0 +1,21 @@
+@mixin HeadingXL {
+	font-weight: bold;
+	font-size: 4.88rem;
+	line-height: 4.88rem;
+	letter-spacing: -0.138rem;
+};
+@mixin HeadingL {
+	font-weight: bold;
+	font-size: 2.66rem;
+	line-height: 3.11rem;
+	letter-spacing: -0.083rem;
+}
+@mixin HeadingM {
+	font-weight: bold;
+	font-size: 1.33rem;
+	line-height: 1.77rem;
+}
+@mixin BodyL {
+	font-weight: normal;
+	line-height: 1.55rem;
+}
